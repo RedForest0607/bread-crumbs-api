@@ -1,0 +1,16 @@
+version: 'latest'
+
+services:
+  postgres:
+    image: postgres
+    build: .
+    container_name: bread-crumbs-db
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: bread_crumbs_db
+    volumes:
+      - "./init/:/docker-entrypoint-initdb.d"

@@ -2,16 +2,32 @@ DROP DATABASE IF EXISTS BREAD_CRUMBS_DB;
 
 CREATE DATABASE BREAD_CRUMBS_DB ;
 
-CREATE TABLE IF NOT EXISTS BREADS (
-  bread_id INT PRIMARY KEY,
-  bread_name VARCHAR(255),
-  price DECIMAL(10, 2),
+CREATE TABLE IF NOT EXISTS BREADS
+(
+  bread_id
+  INT
+  PRIMARY
+  KEY, ;
+  bread_name
+  VARCHAR
+(
+  255
+),
+  price DECIMAL
+(
+  10,
+  2
+),
   description TEXT,
-  image_url VARCHAR(255),
+  image_url VARCHAR
+(
+  255
+),
   quantity_available INT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+  );
+
 
 CREATE TABLE IF NOT EXISTS BREAD_DETAILS (
   bread_id INT PRIMARY KEY,
